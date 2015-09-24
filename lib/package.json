@@ -1,0 +1,9 @@
+{
+    "name": "DatadogS3Event",
+    "scripts": {
+        "run": "node ./DatadogS3Event.js"
+    },
+    "dependencies": {
+        "dogapi": "1.0.6"
+    }
+}
