@@ -18,4 +18,4 @@ Create an instance of the function:
 
 Then, deploy the zip file in `target/` to Amazon.
 
-Finally, in the S3 interface, send Put events to the deployed lambda function.
+Finally, in the S3 interface, wire events to the deployed lambda function.
