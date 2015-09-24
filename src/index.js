@@ -12,7 +12,7 @@ exports.handler = function(event, context) {
   dogapi.initialize(options);
 
   var objectBytes = event.Records[0].s3.object.size;
-  var eventType   = event.Records[0].eventName.indexOf("ObjectDeleted") < 0 ? "created" : "deleted";
+  var eventType   = event.Records[0].eventName.indexOf("ObjectCreated") < 0 ? "removed" : "created";
 
   var cfg = {
     metric_type: "counter"
