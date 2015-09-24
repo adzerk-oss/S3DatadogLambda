@@ -6,13 +6,15 @@ This [Boot](http://boot-clj.com) project builds instances of a node.js Lambda fu
 
 Create an instance of the function:
 
-    boot build -k DATADOG_API_KEY -a DATADOG_APP_KEY -n somelog
+    boot build -k DATADOG_API_KEY -a DATADOG_APP_KEY -n somename
 
 * **DATADOG_API_KEY** is the Datadog API key for the account.
 * **DATADOG_APP_KEY** is a key identifying this particular application.
-* **somelog** is the name of the metric to report.  Two metrics are reported for every S3 put event, put and bytes.  The metrics for this application instance will be:
-  1. `s3lambda.somelog.put` - sent once per S3 event
-  2. `s3lambda.somelog.bytes` - sent with the number of bytes in the object that was put
+* **somename** is the name of the metric to report.  created and removed metrics are reported for every S3 event.  The metrics for this application instance will be:
+  1. `s3lambda.somename.created.put`
+  1. `s3lambda.somename.created.bytes`
+  1. `s3lambda.somename.removed.put`
+  1. `s3lambda.somename.removed.bytes`
 
 Then, deploy the zip file in `target/` to Amazon.
 
