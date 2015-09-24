@@ -13,7 +13,7 @@
   (assert (and api-key app-key metric-name) "api-key, app-key, and metric-name are required")
   (let [zip-name (format "S3DatadogLambda-%s.zip" metric-name)]
     (comp
-     (template :paths ["DatadogS3Event.js"]
+     (template :paths ["index.js"]
                :subs {"api_key" api-key
                       "app_key" app-key
                       "metric_name" metric-name})

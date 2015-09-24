@@ -4,6 +4,7 @@
         "run": "node ./DatadogS3Event.js"
     },
     "dependencies": {
+        "async": "1.4.2",
         "dogapi": "1.0.6"
     }
 }
