@@ -1,4 +1,4 @@
-# S3 Put to Datadog Lambda Function
+# S3 event to Datadog Lambda Function
 
 This [Boot](http://boot-clj.com) project builds instances of a node.js Lambda function for sending S3 events to Datadog.
 
