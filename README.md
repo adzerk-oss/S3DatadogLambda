@@ -11,9 +11,9 @@ Create an instance of the function:
 * **DATADOG_API_KEY** is the Datadog API key for the account.
 * **DATADOG_APP_KEY** is a key identifying this particular application.
 * **somename** is the name of the metric to report.  created and removed metrics are reported for every S3 event.  The metrics for this application instance will be:
-  1. `s3lambda.somename.created.put`
+  1. `s3lambda.somename.created`
   1. `s3lambda.somename.created.bytes`
-  1. `s3lambda.somename.removed.put`
+  1. `s3lambda.somename.removed`
   1. `s3lambda.somename.removed.bytes`
 
 Then, deploy the zip file in `target/` to Amazon.
