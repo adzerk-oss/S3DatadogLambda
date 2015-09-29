@@ -14,7 +14,6 @@ Create an instance of the function:
   1. `s3lambda.somename.created`
   1. `s3lambda.somename.created.bytes`
   1. `s3lambda.somename.removed`
-  1. `s3lambda.somename.removed.bytes`
 
 Then, deploy the zip file in `target/` to Amazon.
 

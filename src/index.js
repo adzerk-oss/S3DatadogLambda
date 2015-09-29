@@ -20,7 +20,9 @@ exports.handler = function(event, context) {
 
   async.series([
     function(callback) {
-      dogapi.metric.send("s3lambda.$metric_name$. " + eventType + ".bytes", objectBytes, cfg, callback);
+      if(eventType === "created") {
+        dogapi.metric.send("s3lambda.$metric_name$. " + eventType + ".bytes", objectBytes, cfg, callback);
+      }
     },
     function(callback) {
       dogapi.metric.send("s3lambda.$metric_name$. " + eventType, 1, cfg, callback);
